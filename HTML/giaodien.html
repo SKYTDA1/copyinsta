@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <!-- Liên kết đến tệp CSS bên ngoài -->
+    <link rel="stylesheet" href="/CSS/giaodien.css">
+</head>
+<body>
+    <!-- Container chứa form -->
+    <div class="container">
+        <div class="form-container">
+            <!-- Tiêu đề chính -->
+            <h1>CRUD OPERATIONS</h1>
+            <!-- Tiêu đề phụ -->
+            <h2>SIGN IN</h2>
+            <!-- Mô tả ngắn -->
+            <p>Enter your credentials to access your account</p>
+            <!-- Form đăng nhập -->
+            <form>
+                <!-- Nhãn cho trường email -->
+                <label for="email">Email</label>
+                <!-- Trường nhập email -->
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <!-- Nhãn cho trường mật khẩu -->
+                <label for="password">Password</label>
+                <!-- Trường nhập mật khẩu -->
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <!-- Nút đăng nhập -->
+                <button id="signInBtn">SIGN IN</button>
+                <!-- Liên kết quên mật khẩu và đặt lại mật khẩu -->
+                <p><a href="/png/forgot.jpg">Forgot your password?</a> <a href="/png/reset.jpg">Reset Password</a></p>
+            </form>
+        </div>
+    </div>
+    <!-- Liên kết đến tệp JavaScript bên ngoài -->
+    <script src="/JS/giaodien.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Billabong';
+    src: url('/font/Billabong.otf') format('truetype');
+}
+/* Đặt phông chữ và khoảng cách cho toàn bộ trang */
+body {
+    font-family: 'Billabong', cursive; /* Phông chữ cho toàn bộ trang */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Màu nền gradient */
+    color: #fff; /* Màu chữ */
+}
+
+/* Định dạng sidebar */
+.sidebar {
+    width: 250px; /* Chiều rộng của sidebar */
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền của sidebar với độ mờ */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px; /* Chiều rộng ảnh đại diện */
+    height: 100px; /* Chiều cao ảnh đại diện */
+    border-radius: 50%; /* Bo tròn ảnh đại diện */
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #333; /* Màu chữ */
+}
+
+.profile p {
+    margin: 0;
+    color: #888; /* Màu chữ nhạt */
+    font-size: 14px;
+}
+
+nav ul {
+    list-style: none; /* Xóa bullet */
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Màu chữ */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center; /* Căn chỉnh chữ ra giữa */
+}
+
+nav ul li a:hover, .active a {
+    color: #fff; /* Màu chữ khi hover */
+}
+
+.logout {
+    text-align: center;
+}
+
+.logout a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Màu nền gradient */
+    color: #fff; /* Màu chữ */
+}
+
+/* Định dạng main content */
+.main-content {
+    flex: 1; /* Lấp đầy không gian còn lại */
+    padding: 20px;
+    overflow-y: auto; /* Cho phép cuộn dọc */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.8); /* Màu nền của nội dung chính với độ mờ */
+    padding: 20px;
+    border-radius: 10px; /* Bo góc của hộp */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    color: #333; /* Màu chữ */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center; /* Căn chỉnh chữ ra giữa */
+}
+
+.add-payment {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Màu nền gradient */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Đẩy nút về bên phải */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+td button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+/* Định dạng modal */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input {
+    margin: 5px 0;
+}
+
+form button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Màu nền gradient */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center; /* Căn chỉnh chữ ra giữa */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="/CSS/payment.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>CRUD OPERATIONS</h1>
+        <div class="profile">
+            <img src="/png/profile.jpg" alt="Profile Picture"> 
+            <h2>Trần Thái Dương</h2> 
+            <p>Admin</p> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/HTML/dashboard.html">Dashboard</a></li> <!-- Liên kết đến dashboard -->
+                <li><a href="/HTML/student.html">Students</a></li> <!-- Liên kết đến trang sinh viên -->
+                <li class="active"><a href="/HTML/payment.html">Payment</a></li> <!-- Liên kết đến trang thanh toán -->
+            </ul>
+        </nav>
+        <div class="logout">
+            <a href="/HTML/giaodien.html">Logout</a> <!-- Liên kết đăng xuất -->
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <input type="search" placeholder="Search..."> <!-- Ô tìm kiếm -->
+            <button>🔔</button> <!-- Nút thông báo -->
+        </header>
+        <div class="content">
+            <h1>Payment Details</h1> <!-- Tiêu đề trang -->
+            <button class="add-payment" onclick="openAddPaymentModal()">Add New Payment</button> <!-- Nút thêm thanh toán mới -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Payment Schedule</th>
+                        <th>Bill Number</th>
+                        <th>Amount Paid</th>
+                        <th>Balance amount</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentTableBody">
+                    <!-- Hàng thanh toán sẽ được thêm động tại đây -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal để thêm/sửa thanh toán -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span> <!-- Nút đóng modal -->
+            <h2 id="modalTitle">Add Payment</h2> <!-- Tiêu đề modal -->
+            <form id="paymentForm">
+                <input type="hidden" id="paymentId"> <!-- ID ẩn để nhận diện thanh toán -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" required> <!-- Tên -->
+                <label for="schedule">Payment Schedule:</label>
+                <input type="text" id="schedule" required> <!-- Lịch trình thanh toán -->
+                <label for="billNumber">Bill Number:</label>
+                <input type="text" id="billNumber" required> <!-- Số hóa đơn -->
+                <label for="amountPaid">Amount Paid:</label>
+                <input type="number" id="amountPaid" required> <!-- Số tiền đã thanh toán -->
+                <label for="balanceAmount">Balance Amount:</label>
+                <input type="number" id="balanceAmount" required> <!-- Số tiền còn lại -->
+                <label for="date">Date:</label>
+                <input type="date" id="date" required> <!-- Ngày -->
+                <button type="submit">Save</button> <!-- Nút lưu -->
+            </form>
+        </div>
+    </div>
+
+    <script src="/JS/payment.js"></script> <!-- Liên kết đến tệp JavaScript -->
+</body>
+</html>

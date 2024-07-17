@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="/CSS/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="admin-info">
+                <div class="admin-header">
+                    <h1>CRUD OPERATIONS</h1> <!-- Tiêu đề chính -->
+                    <img src="/png/profile.jpg" alt="Admin">
+                </div>
+                <p class="admin-name">Trần Thái Dương</p>
+                <p class="admin-role">Admin</p>
+            </div>
+            <ul>
+                <li class="active"><a href="/HTML/dashboard.html">Dashboard</a></li> <!-- Liên kết đến trang dashboard -->
+                <li><a href="/HTML/student.html">Students</a></li> <!-- Liên kết đến trang Students -->
+                <li><a href="/HTML/payment.html">Payments</a></li> <!-- Liên kết đến trang Payments -->
+            </ul>
+            <button class="logout">Logout</button> <!-- Nút đăng xuất -->
+        </nav>
+        <main>
+            <section class="cards">
+                <div class="card students">
+                    <h3>Students</h3>
+                    <p>243</p>
+                </div>
+                <div class="card course">
+                    <h3>Course</h3>
+                    <p>13</p>
+                </div>
+                <div class="card payments">
+                    <h3>Payments</h3>
+                    <p>INR 556,000</p>
+                </div>
+                <div class="card users">
+                    <h3>Users</h3>
+                    <p>3</p>
+                </div>
+            </section>
+            <section class="students-management">
+                <h2>Manage Students</h2> <!-- Tiêu đề phần quản lý sinh viên -->
+                <button id="add-student-btn">Add Student</button> <!-- Nút thêm sinh viên -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-table-body">
+                        <!-- Dữ liệu sinh viên sẽ được chèn ở đây bởi JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="/JS/dashboard.js"></script> <!-- Liên kết đến file JavaScript -->
+</body>
+</html>

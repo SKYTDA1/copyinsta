@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Học Sinh</title>
+    <!-- Liên kết đến file CSS -->
+    <link rel="stylesheet" href="/CSS/student.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="admin-profile">
+                <!-- Ảnh và thông tin admin -->
+                <img src="/png/admin.jpg" alt="Admin Photo" class="admin-photo">
+                <h2>Trần Thái Dương</h2>
+                <p>Admin</p>
+            </div>
+            <nav>
+                <ul>
+                    <!-- Menu điều hướng -->
+                    <li><a href="/HTML/dashboard.html">Dashboard</a></li>
+                    <li><a href="/HTML/student.html" class="active">Students</a></li>
+                    <li><a href="/HTML/payment.html">Payment</a></li>
+                </ul>
+            </nav>
+            <!-- Nút đăng xuất -->
+            <button id="logoutButton">Logout</button>         
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Danh Sách Học Sinh</h1>
+                <!-- Ô tìm kiếm -->
+                <input type="text" id="search" placeholder="Search...">
+                <!-- Nút thêm học sinh mới -->
+                <button class="add-student" id="addStudentBtn">Add New Student</button>
+            </header>
+            <!-- Bảng hiển thị danh sách học sinh -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hình ảnh</th>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Mã số</th>
+                        <th>Ngày nhập học</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTable">
+                    <!-- Nội dung học sinh sẽ được thêm động -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Modal thêm/chỉnh sửa học sinh -->
+    <div class="modal" id="studentModal">
+        <div class="modal-content">
+            <!-- Nút đóng modal -->
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Add Student</h2>
+            <!-- Form thêm/chỉnh sửa học sinh -->
+            <form id="studentForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="enrollNumber">Enroll Number:</label>
+                <input type="text" id="enrollNumber" name="enrollNumber" required>
+                
+                <label for="dateOfAdmission">Date of Admission:</label>
+                <input type="date" id="dateOfAdmission" name="dateOfAdmission" required>
+
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                
+                <button type="submit" id="saveStudentBtn">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Liên kết đến file JavaScript -->
+    <script src="/JS/student.js"></script>
+</body>
+</html>

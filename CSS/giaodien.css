@@ -1,0 +1,114 @@
+/* Import font Billabong */
+@font-face {
+    font-family: 'Billabong';
+    src: url('fonts/Billabong.ttf') format('truetype');
+}
+
+/* Đặt kiểu cho body */
+body {
+    margin: 0; 
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+/* Đặt kiểu cho container chính */
+.container {
+    width: 375px; 
+    height: 450px; 
+    background-color: white; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Đặt kiểu cho container của form */
+.form-container {
+    text-align: center; 
+}
+
+/* Đặt kiểu cho tiêu đề chính */
+h1 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: black; 
+    font-weight: bold; 
+    line-height: 1.2; 
+    font-family: 'Billabong', cursive; 
+}
+
+/* Đặt kiểu cho tiêu đề phụ */
+h2 {
+    font-size: 18px; /* Kích thước font chữ */
+    margin-bottom: 20px; /* Khoảng cách phía dưới */
+    color: black; /* Màu chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Billabong', cursive; 
+}
+
+/* Đặt kiểu cho đoạn mô tả ngắn */
+p {
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+    color: grey; /* Màu chữ */
+    font-size: 14px; /* Kích thước font chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Billabong', cursive; 
+}
+
+/* Đặt kiểu cho nhãn */
+label {
+    display: block; /* Hiển thị dưới dạng khối */
+    margin: 10px 0 5px; /* Khoảng cách trên và dưới */
+    text-align: left; /* Căn trái văn bản */
+    color: black; /* Màu chữ */
+    font-size: 14px; /* Kích thước font chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Billabong', cursive; 
+}
+
+/* Đặt kiểu cho trường nhập email và mật khẩu */
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin: 5px 0 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 14px; 
+    line-height: 1.4; 
+}
+
+/* Đặt kiểu cho nút đăng nhập */
+button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #3897f0;
+    border: none; 
+    color: white;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    line-height: 1.4; 
+    font-family: 'Billabong', cursive;   
+}
+
+/* Đặt kiểu cho nút đăng nhập khi di chuột qua */
+button:hover {
+    background-color: #287dc2; 
+}
+
+/* Đặt kiểu cho liên kết */
+a {
+    color: #3897f0; 
+    text-decoration: none; 
+    font-size: 14px; 
+    line-height: 1.4; 
+    font-family: 'Billabong', cursive; 
+}
+
+/* Đặt kiểu cho liên kết khi di chuột qua */
+a:hover {
+    text-decoration: underline; 
+}
